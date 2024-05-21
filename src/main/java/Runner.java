@@ -30,22 +30,22 @@ public class Runner {
         Computer computer = new Computer(95);
 
         // 2. Use a getter to find out how much storage the computer has
-        int currentStorage = computer.currentStorage();
+        int currentStorage = computer.getStorage();
         System.out.println("Computer has " + currentStorage + "GB storage");
 
         // 3. Add more storage to the computer
         computer.setStorage(48);
         // We use the getter again to check that the amount of storage has been updated
-       int newStorage = computer.currentStorage();
+       int newStorage = computer.getStorage();
        System.out.println("Computer now has " + newStorage + "GB storage");
 
 
         // 4. Use a setter to update the computer's printer property
 
-       computer.setPrinterModel("Gellani");
+       computer.setPrinter("Gellani");
 //
 //        // Write a getter and use it below to check that the setter worked
-       String currentPrinter = computer.printerModel;
+       String currentPrinter = computer.getPrinter();
        System.out.println("Computer currently has a " + currentPrinter + " printer connected.");
 
         // 5. Write a method to print a message.
@@ -59,19 +59,17 @@ public class Runner {
         System.out.println("Running shopping trolley tasks...");
 
         // 1. Create a new shopping trolley
-        // ShoppingTrolley trolley = <INSTANTIATE A NEW SHOPPINGTROLLEY OBJECT HERE>;
+        ShoppingTrolley trolley = new ShoppingTrolley();
 
         // 2. Add an item to the trolley
-//        <CALL YOUR METHOD HERE>;
+       trolley.addItem("milk");
 
         // 3. Count items in the trolley
-//        int itemCount = <CALL YOUR METHOD HERE>;
-//        System.out.println("The trolley contains " + itemCount + " items.");
+        int itemCount = trolley.countItemsInTrolley();
+      System.out.println("The trolley contains " + itemCount + " items.");
 
         // 4. Check if an item is in the trolley
-//        boolean itemInTrolley = <CALL YOUR METHOD HERE>;
-//        System.out.println("Object is a square (true/false): " + itemInTrolley);
+    boolean itemInTrolley = trolley.checkIfItemInTrolley("milk");
+    System.out.println("Object is a square (true/false): " + itemInTrolley);
     }
-
-
 }

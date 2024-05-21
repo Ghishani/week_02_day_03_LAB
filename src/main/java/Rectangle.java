@@ -1,8 +1,8 @@
 public class Rectangle {
 
     //rectangle properties
-    int length;
-    int width;
+    private int length;
+    private int width;
 
     // constructor
     public Rectangle(int inputLength, int inputWidth){

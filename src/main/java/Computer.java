@@ -1,41 +1,38 @@
 public class Computer {
 
     // Computer Properties
-    int storage;
-    String printerModel;
+    private int storage;
+    private String printer;
 
 
     // Constructor
 
     public Computer(int inputStorage){
         this.storage = inputStorage;
-        this.printerModel = null;
+        this.printer = "";
     }
 
-    //getter
-    //public String getName(){
-//        return this.name;
-
-    public int currentStorage(){
+    public int getStorage(){
         return this.storage;
     }
 
-    public void setStorage(int addStorage){
-        this.storage += addStorage;
+    public void setStorage(int extraStorage){
+        this.storage += extraStorage;
     }
 
-    public void setPrinterModel(String printerModel2){
+    public String getPrinter(){
+        return this.printer;
+    }
 
-        this.printerModel = printerModel2;
+    public void setPrinter(String printerName){
+
+        this.printer = printer;
     }
 
     public void printMessage(String message){
 
-        if (this.printerModel != null){
+        if (!this.printer.equals("")){
             System.out.println(message);
         }
     }
-
-
-
 }
